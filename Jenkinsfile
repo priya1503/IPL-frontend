@@ -15,6 +15,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh "cd app"
                 sh 'npm run test'
             }
         }
