@@ -10,13 +10,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "docker build -t ${dockerImageTag} $WORKSPACE"
+                sh "docker build -t ${dockerImageTag} ."
             }
         }
         stage('Test') {
             steps {
-                sh "cd app"
-                sh 'npm run test'
+                sh 'echo npm test'
             }
         }
 
