@@ -12,7 +12,7 @@ EXPOSE 3000
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm install
+RUN npm install --global
 
 # add app
 COPY . ./
