@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "docker build -t ${dockerImageTag} ."
+                sh "docker build -t ${dockerImageTag} $WORKSPACE"
             }
         }
         stage('Test') {
