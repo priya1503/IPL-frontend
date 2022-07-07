@@ -13,6 +13,7 @@ pipeline {
                 sh "docker build -t ${dockerImageTag} ."
             }
         }
+        
         stage('Test') {
             steps {
                 sh 'echo npm test'
